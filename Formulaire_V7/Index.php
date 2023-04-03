@@ -10,5 +10,5 @@
 
 <?php
 session_destroy();
-header('Location: ./vue/Login.php');
+header('Location: ./vue/Accueil.php');
 ?>
