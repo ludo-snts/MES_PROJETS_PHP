@@ -1,0 +1,17 @@
+#tab{
+    
+    margin: auto;
+    border: 4mm ridge darkblue ;
+    margin-top: 1%;
+    width: 100%;
+    text-align: center;
+}
+td{
+    border:ridge 3px blue;
+    color: darkorange;
+    margin: 0px;
+}
+
+
+
+

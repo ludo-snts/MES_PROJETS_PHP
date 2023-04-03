@@ -1,0 +1,281 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+/* VARIABLES */
+* {
+    /* COLOR */
+    --color-01: #BBD6B8;
+    --color-02: #AEC2B6;
+    --color-03: #94AF9F;
+    --color-04: #DBE4C6;
+    --light: #FFF;
+    --dark: #444;
+    --grey: #999;
+    --lightgrey: #EEE;
+    /* SHADOW */
+    --shadow-01: 0 5px 8px rgba(0,0,0,0.15), 0 5px 8px rgba(0,0,0,0.20);
+    --shadow-02: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0,0,0,0.20);
+    --shadow-03: 0 -1px 3px rgba(0, 0, 0, 0.15), 0 -1px 2px rgba(0,0,0,0.20);
+}
+/* VARIABLES - FIN */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark);
+    background-image: linear-gradient(to right, var(--color-02), var(--color-01));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--light);
+    color: var(--color-03);
+    box-shadow: var(--shadow-02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 100vw;
+    text-align: center;
+}
+
+.form-container,
+.list-container{
+    background-color: var(--light);
+    width: clamp(560px, 80%, 700px);
+    margin-block: 3rem;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: var(--shadow-01);
+}
+
+
+
+
+.form-container-title,
+.list-container-title{
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--color-02);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: start;
+}
+
+.form-container-input{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: .5rem;
+    width: 100%;
+}
+
+.form-container-input-input,
+.form-container-select-select{
+    position: relative;
+    background-color: rgba(147, 207, 182, 0.2);
+    padding: 1rem;
+    margin-inline: 1rem 5rem;
+    min-width: 300px;
+    color: black;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+    resize: none;
+    font-size: 1.1rem;
+}
+
+.form-container-input-input:focus,
+.form-container-input-input:focus{
+    outline: none;
+    /* outline-color: transparent a le meme effet que outline: none, mais ne pose pas de probleme d'accessibilité en haut contraste*/
+    outline-color: transparent;
+    background-color: var(--light);
+    border-bottom: 2px solid var(--color-01);
+    border-radius: 0;
+}
+
+/* 'ANS' INTO INPUT */
+.form-container-input-age{
+    position: relative;
+}
+.form-container-input-age>span {
+    position: absolute;
+    right: 6.6rem;
+    pointer-events: none;
+    width: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.form-container-input-age>input {
+    padding-left: 0;
+    padding-right: 3.8rem;
+    text-align: right;
+}
+/* 'ANS' INPUT - FIN */
+
+/* SELECT CONTAINER */
+.form-container-select{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: .5rem;
+    /* width: 100%; */
+
+
+}
+
+/* SELECT CONTAINER - FIN */
+
+
+
+/* BUTTON */
+/* CONTAINER */
+.form-container-button,
+.update-container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* BIG BUTTON  */
+.form-container-button-button,
+.update-container-button-button{
+    background-color: var(--color-04);
+    color: var(--light);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    height: 3rem;
+    border: none;
+    width: 80%;
+    box-shadow: var(--shadow-02);
+    margin: 1rem;
+}
+/* LIST BUTTON  */
+.list-container-tab-body-button{
+    background-color: var(--color-04);
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    padding: .3rem 1rem;
+}
+.form-container-button-button:hover,
+.form-container-button-button:focus,
+.list-container-tab-body-button:hover,
+.list-container-tab-body-button:focus,
+.update-container-button-button:hover,
+.update-container-button-button:focus{
+    outline: none;
+    /* outline-color: transparent a le meme effet que outline: none, mais ne pose pas de probleme d'accessibilité en haut contraste*/
+    outline-color: transparent;
+    background-color: var(--color-01);
+    color: var(--light);
+    cursor: pointer;
+}
+/* UPDATE BUTTON */
+.update-container-button-button{
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* BUTTON - FIN */
+
+
+/* MESSAGE SESSION */
+.form-container-message{
+    color: var(--color-03);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-block: 1rem;
+}
+
+/* MESSAGE SESSION - FIN */
+
+
+/* TABLE */
+.list-container-tab{
+    width: 100%;
+    border-collapse: collapse;
+}
+.list-container-tab-head{
+    color: var(--light);
+    background-color: var(--color-01);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.list-container-tab-head>tr>th{
+    padding: .2rem;
+}
+.list-container-tab-body>tr:nth-child(2n){
+    background-color: var(--lightgrey);
+}
+.list-container-tab-body>tr>td{
+    padding-block: .5rem;
+}
+/* TABLE - FIN */
+
+
+/* LINK */
+.form-container-link>a,
+.list-container-link>a,
+.homepage-container-link>a{
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 700;
+}
+/* LINK - FIN */
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    bottom: 0; */
+    box-shadow: var(--shadow-03);
+    width: 100%;
+    height: 2rem;
+
+    background-color: var(--light);
+    color: var(--color-03);
+}
+
+
+
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

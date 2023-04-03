@@ -1,0 +1,6 @@
+ServerSignature Off
+Options -Indexes
+
+ErrorDocument 403  http://localhost/MES_PROJETS/Formulaire_V7/vue/403.php
+ErrorDocument 404  http://localhost/MES_PROJETS/Formulaire_V7/vue/404.php
+
