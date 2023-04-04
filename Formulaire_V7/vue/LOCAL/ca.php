@@ -8,6 +8,7 @@
         'Login.php' => 'INICIAR SESSIÓ V7',
         '403.php' => '403 V7',
         '404.php' => '404 V7',
+        'Message_Error.php' => 'MISSATGE ERROR V7',
         // LANGUAGE
         'language' => '🌍 Trieu un idioma',
         'french' => '🇫🇷 francès',

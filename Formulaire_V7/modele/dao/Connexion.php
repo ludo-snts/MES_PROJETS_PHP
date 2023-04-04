@@ -1,6 +1,11 @@
 <?php
 
+// NAMESPACE
 namespace modele\dao;
+//USE ... AS
+use modele\dao\exception\ExceptionDao as ExceptionDao;
+//AUTOLOADER
+require_once '../autoloader.php';
 
 class Connexion
 {
@@ -18,13 +23,11 @@ class Connexion
 
     public function getConnexion() {
         $dsn= $this->driver.':host='.$this->host.';dbname='.$this->database.';charset='.$this->charset;
-
         try {
             $connexion = new \PDO($dsn, $this->user, $this->pass);
             return $connexion;
-
         } catch (\PDOException $e) {
-            throw new \Exception('Impossib de se connecter à la BDD');
+            throw new ExceptionDao('Connexion : CONNEXION BDD : KO');
         }
     }
 }

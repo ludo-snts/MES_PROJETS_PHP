@@ -8,7 +8,7 @@
         'Login.php' => 'LOGIN V7',
         '403.php' => '403 V7',
         '404.php' => '404 V7',
-
+        'Message_Error.php' => 'ERROR MESSAGE V7',
         // LANGUAGE
         'language' => '🌍 Select language',
         'french' => '🇫🇷 French',

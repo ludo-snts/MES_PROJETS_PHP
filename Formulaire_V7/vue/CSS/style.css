@@ -48,6 +48,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 header h1,
@@ -375,7 +376,9 @@ visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--light);
+    /* background: var(--light); */
+    background: hsla(0, 0%, 100%, 0.6);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: 0;

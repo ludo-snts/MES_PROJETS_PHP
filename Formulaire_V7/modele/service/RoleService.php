@@ -4,10 +4,9 @@
 namespace modele\service;
 //USE ... AS
 use modele\dao\RoleDao as RoleDao;
-
-// require_once 'Connexion.php';
-// require_once 'Role.php';
-// require_once '../dao/RoleDao.php';
+use modele\dao\exception\ExceptionDao as ExceptionDao;
+use modele\service\exception\ExceptionService as ExceptionService;
+//AUTOLOADER
 require_once '../autoloader.php';
 
 class RoleService {
@@ -15,18 +14,30 @@ class RoleService {
     private $hroleDao;
 
     public function __construct() {
-        $hroleService = $this->hroleDao = new RoleDao();
-        return $hroleService;
+        try {
+            $hroleService = $this->hroleDao = new RoleDao();
+            return $hroleService;
+        } catch (ExceptionDao $e) {
+            throw new ExceptionService('RoleService : CONNEXION BDD : KO');
+        }
+    
     }
 
     public function afficher() {
-        $hroleService = $this->hroleDao->afficher();
-        return $hroleService;
+        try {
+            $hroleService = $this->hroleDao->afficher();
+            return $hroleService;
+        } catch (ExceptionDao $e) {
+            throw new ExceptionService('RoleService : AFFICHER : KO');
+        }
     }
 
     public function afficherun($id) {
-        $hroleService = $this->hroleDao->afficherun($id);
-        return $hroleService;
-
+        try {
+            $hroleService = $this->hroleDao->afficherun($id);
+            return $hroleService;
+        } catch (ExceptionDao $e) {
+            throw new ExceptionService('RoleService : AFFICHER UN : KO');
+        }
     }
 }
